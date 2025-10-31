@@ -17,7 +17,7 @@
 - **Comparaison multi-cryptos** : Visualisation comparative avec sélection de période
 - **Actualités récentes** : Flux d'articles avec scores de sentiment
 
-### 📰 Actualités
+### 📰 Actualités 
 - **Liste d'articles** paginée avec filtres par source et sentiment
 - **Détail d'article** en sidebar desktop ou modal mobile/tablet
 - **Recherche et filtrage** avancés

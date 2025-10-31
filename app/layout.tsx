@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider } from "@/contexts/SidebarContext";
+import { LoaderProvider } from "@/contexts/LoaderContext";
 import DashboardSidebar from "@/components/DashboardSidebar";
 import MainContent from "@/components/MainContent";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -34,11 +35,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SidebarProvider>
-            <DashboardSidebar />
-            <MainContent>{children}</MainContent>
-            <BottomNav />
-          </SidebarProvider>
+          <LoaderProvider>
+            <SidebarProvider>
+              <DashboardSidebar />
+              <MainContent>{children}</MainContent>
+              <BottomNav />
+            </SidebarProvider>
+          </LoaderProvider>
         </ThemeProvider>
       </body>
     </html>

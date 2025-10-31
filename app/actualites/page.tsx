@@ -152,6 +152,17 @@ export default function ActualitesPage() {
               <Card className="bg-card border-border sticky top-24 h-full">
                 <CardContent className="px-6 space-y-4 flex flex-col justify-between h-full">
                   <div className="flex flex-col gap-4">
+                    {/* Close button */}
+                    <button
+                      onClick={() => setSelectedArticleId(null)}
+                      className="absolute top-4 right-4 p-2 rounded-lg hover:bg-accent transition-colors cursor-pointer"
+                      aria-label="Fermer"
+                    >
+                      <svg className="w-5 h-5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+
                     <div className="flex flex-col gap-2 text-sm flex-wrap pb-5 border-b border-border">
                       <div className="flex items-center gap-2 text-sm flex-wrap">
                         <span className="px-2 py-1 rounded bg-primary/10 text-primary font-medium">{selectedArticle.source}</span>
